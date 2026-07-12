@@ -1,0 +1,38 @@
+{
+  "version": "4.0",
+  "pipe": "ComfyUI SDXL → 场景定妆 · 关键环境 × 4",
+  "base_model": "juggernautXL_v9.safetensors",
+
+  "shots": [
+    {
+      "id": "location_room_wide",
+      "scene": "场景A · 出租屋广角",
+      "description": "全片主要场景——华强北6楼出租屋，早上5:50",
+      "prompt_positive": "wide shot interior of small old apartment in Huaqiangbei Shenzhen, 6th floor walk-up, peeling pale green wall paint from 1990s, worn wooden desk against window with old MacBook, bookshelf made of bricks and planks with Chinese programming books, window showing three laundry lines between buildings with shirts hanging in humid still air, morning light filtered through smog creating grey-green atmosphere, condensation beads on interior walls, damp patch on ceiling corner, single electric oscillating fan, pour-over coffee dripper on folding table, one warm desk lamp, Edward Hopper composition meets Wong Kar-wai lighting, photorealistic, deep focus, 28mm wide angle",
+      "prompt_negative": "modern renovation, clean white walls, air conditioner, sunny day, spacious, luxury apartment, minimalism, IKEA furniture"
+    },
+    {
+      "id": "location_window_exterior",
+      "scene": "场景B · 窗外深圳",
+      "description": "从旧楼窗口看到2026年深圳天际线",
+      "prompt_positive": "view from old apartment window 6th floor looking out at Shenzhen skyline 2026, Ping An Finance Center and new skyscrapers in distance, foreground shows three laundry lines with white shirts socks and faded towel hanging motionless in dead humid air, morning haze grey-green sky, contrast between futuristic skyline and old residential building foreground, condensation drops on window glass creating slight distortion, photorealistic, 50mm lens, slightly desaturated, documentary style",
+      "prompt_negative": "clear blue sky, sunny day, clean window, modern apartment, drone shot, HDR oversaturated"
+    },
+    {
+      "id": "location_wall_condensation",
+      "scene": "意象 · 墙壁渗水",
+      "description": "全片反复出现的隐喻——回南天的水珠，擦不干净",
+      "prompt_positive": "extreme macro shot of interior wall surface in old apartment, condensation beads forming and slowly running down pale green paint, one large bead catching morning light and glowing briefly, old water stain marks visible beneath paint, slight mold at edges, the water traces a path that follows an old stain pattern, grey-green melancholic tones, photorealistic texture visible paint brushstrokes, cinematic lighting, poetic documentary style, the moisture feels inevitable rather than threatening",
+      "prompt_negative": "clean wall, dry surface, bright lighting, modern paint, bathroom tile"
+    },
+    {
+      "id": "location_shenzhen_dawn",
+      "scene": "过渡 · 华强北清晨",
+      "description": "每场之间的城市过渡镜头",
+      "prompt_positive": "Huaqiangbei electronics district Shenzhen at 5:50 AM, few people on street mostly delivery scooters, grey humid sky with streetlights still on reflecting in puddles on pavement, old buildings with layers of renovation and new LED signs, one man walking alone carrying breakfast soy milk in plastic bag, wet ground from overnight humidity, photorealistic wide shot, 35mm lens, Wong Kar-wai green color grade, slightly desaturated, melancholic urban poetry, everyday China 2026",
+      "prompt_negative": "busy crowd, neon cyberpunk, futuristic, Times Square style, clean modern plaza, sunny morning"
+    }
+  ],
+
+  "negative_prompt_shared": "bright, sunny, clean, modern, renovated, HDR, oversaturated, tourist, happy, vibrant colors"
+}

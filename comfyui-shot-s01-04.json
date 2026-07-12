@@ -1,0 +1,52 @@
+{
+  "version": "1.0",
+  "shot": "S01-04 — 老周看阿呆第一行字 · 屏幕反光在镜片上",
+  "pipeline": "SDXL + IPAdapter (face ref) + ControlNet depth",
+  "nodes": {
+    "checkpoint": {
+      "model": "sd_xl_base_1.0.safetensors 或 juggernautXL_v9.safetensors",
+      "note": "写实风格，推荐 Juggernaut XL 或 RealVisXL"
+    },
+    "prompt_positive": [
+      "medium close-up portrait of a 38-year-old East Asian man",
+      "thin face, slight stubble, tired but focused intelligent eyes",
+      "wearing thin metal frame glasses with faint green terminal text reflecting on left lens",
+      "sitting at a worn wooden desk in a dim rented apartment",
+      "warm desk lamp light from left side, cool blue-green screen light from front",
+      "dark grey cotton t-shirt, slightly hunched posture",
+      "short black hair, slightly messy, no styling product",
+      "morning light barely entering from window behind, humid grey-green atmosphere",
+      "photorealistic, natural skin texture with visible pores, 35mm lens, f/2.8",
+      "ARRI Alexa color science, subtle desaturation, lifted blacks",
+      "Wong Kar-wai inspired lighting, practical light sources only",
+      "condensation on window glass visible in background"
+    ],
+    "prompt_negative": [
+      "smiling, muscular, young, clean-shaven perfect skin",
+      "studio lighting, bright sunlight, colorful background",
+      "AI-generated face artifacts, plastic skin, symmetrical face",
+      "futuristic, neon, cyberpunk, holographic displays",
+      "western actor, non-Asian features, blue eyes",
+      "perfect posture, new furniture, modern apartment"
+    ],
+    "settings": {
+      "steps": 30,
+      "cfg": 7.5,
+      "resolution": "1344x768",
+      "sampler": "dpmpp_2m_sde",
+      "scheduler": "karras",
+      "seed": "random (record for consistency)"
+    },
+    "controlnet": {
+      "type": "depth",
+      "strength": 0.65,
+      "note": "用真人照片提取深度图做姿态参考，不要用3D模型"
+    },
+    "ipadapter": {
+      "type": "face_id",
+      "reference": "一张东亚男性正面参考图（可用Midjourney/真实照片提取）",
+      "strength": 0.7,
+      "note": "保持所有老周镜头中面部特征一致"
+    }
+  }
+}

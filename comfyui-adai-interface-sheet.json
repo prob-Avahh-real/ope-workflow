@@ -1,0 +1,31 @@
+{
+  "version": "3.0",
+  "pipe": "ComfyUI SDXL → 阿呆终端界面 × 3 种状态",
+  "base_model": "juggernautXL_v9.safetensors (写真细节好)",
+  "note": "阿呆所有镜头——黑底绿字终端，等宽字体，无拟人UI",
+
+  "shots": [
+    {
+      "id": "adai_normal",
+      "state": "正常输出 · 第一场",
+      "description": "阿呆说第一句台词时的画面",
+      "prompt_positive": "extreme close-up of an old LCD computer monitor screen, black terminal background with green monospace text reading a line of Chinese characters, screen slightly yellowed with age, thin grey bezel with dust on edges, green cursor blinking at end of text, subtle scanlines visible, warm ambient light from room reflecting dimly on screen surface, photorealistic macro shot, shallow depth of field showing dust on keyboard keys below screen, vintage but not retro tech aesthetic",
+      "prompt_negative": "futuristic interface, holographic display, bright glowing UI, voice assistant avatar, emoji, colorful, rounded corners, modern flat design, Apple product"
+    },
+    {
+      "id": "adai_thinking",
+      "state": "思考中 · 第二场",
+      "description": "三条省略号，一条比一条停顿长",
+      "prompt_positive": "macro shot of LCD terminal screen, black background, three lines of green monospace ellipsis text appearing with increasing pause times, cursor blinking after last line, same aged monitor with dust on edges, slightly warmer screen tone from age, photorealistic, very shallow depth of field, the screen reflection shows a dim silhouette of a person waiting",
+      "prompt_negative": "AI avatar, robot face, animation, progress bar, spinning wheel, percentage counter"
+    },
+    {
+      "id": "adai_self_update",
+      "state": "自更新 · 第四场",
+      "description": "内存 200MB → 1.2GB，没有进度条，3秒完成",
+      "prompt_positive": "close-up of old LCD monitor screen, black terminal with single line of green text showing memory increase, no progress bar no ETA no animation, minimalist, the text feels heavier somehow despite being the same font, screen reflection shows a hand frozen halfway to keyboard, dust particles caught in screen light, photorealistic, slight vignette from aged backlight, tense stillness conveyed through composition"
+    }
+  ],
+
+  "negative_prompt_shared": "colorful UI, modern monitor, 4K display, thin bezels, Apple Cinema Display, bright backlight, animated, futuristic, voice assistant, emoji, graphical interface"
+}

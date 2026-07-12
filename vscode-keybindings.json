@@ -1,0 +1,34 @@
+[
+  // ============================================================
+  // OPE VS Code Keybindings
+  // 放置位置: ~/Library/Application Support/Code/User/keybindings.json
+  // 可回撤: 备份原文件后覆盖，或删除恢复默认
+  // 策略: 不覆盖 VS Code 默认快捷键，只补充高频操作映射
+  // ============================================================
+
+  // ── 终端快速切换 ──
+  { "key": "ctrl+`", "command": "workbench.action.terminal.toggleTerminal" },
+  { "key": "ctrl+shift+`", "command": "workbench.action.terminal.new" },
+
+  // ── 文件快速操作 ──
+  { "key": "cmd+k cmd+d", "command": "editor.action.formatDocument" },
+  { "key": "ctrl+tab", "command": "workbench.action.nextEditor" },
+  { "key": "ctrl+shift+tab", "command": "workbench.action.previousEditor" },
+
+  // ── Go 专用 ──
+  { "key": "cmd+shift+t", "command": "go.test.package", "when": "editorLangId == 'go'" },
+  { "key": "cmd+shift+r", "command": "go.test.file", "when": "editorLangId == 'go'" },
+  { "key": "cmd+shift+g", "command": "go.generate.test", "when": "editorLangId == 'go'" },
+
+  // ── Flutter 专用 ──
+  { "key": "f5", "command": "flutter.hotReload", "when": "editorLangId == 'dart'" },
+  { "key": "cmd+f5", "command": "flutter.hotRestart", "when": "editorLangId == 'dart'" },
+
+  // ── AI 辅助快捷键 ──
+  { "key": "cmd+i", "command": "editor.action.inlineSuggest.trigger" },
+  { "key": "cmd+shift+i", "command": "cline.plusButtonClicked" },
+
+  // ── 注释 ──
+  { "key": "cmd+/", "command": "editor.action.commentLine" },
+  { "key": "cmd+shift+/", "command": "editor.action.blockComment" }
+]

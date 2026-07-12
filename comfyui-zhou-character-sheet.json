@@ -1,0 +1,47 @@
+{
+  "version": "2.0",
+  "pipe": "ComfyUI SDXL Batch → 老周全角度定妆 (6张)",
+  "base_model": "juggernautXL_v9.safetensors 或 RealVisXL_v5.safetensors",
+  "ipadapter_face_ref": "/path/to/zhou_face_reference.png (选一张东亚男性正脸或3/4，忧郁但专注)",
+
+  "shots": [
+    {
+      "id": "zhou_face_front",
+      "angle": "正面 · 看屏幕",
+      "description": "正面肖像，镜片上反光一行绿色终端文字，嘴唇微抿",
+      "prompt_positive": "frontal portrait of 38-year-old East Asian man, thin face, short black messy hair, thin wireframe glasses with green terminal text reflected on left lens, tired intelligent eyes, slight stubble, dark grey t-shirt, sitting at old wooden desk, warm desk lamp from left, blue screen glow from front, humid atmosphere, photorealistic, 35mm f2.8, lifelike skin texture, morning light through condensation-covered window, Wong Kar-wai color palette, ARRI Alexa look"
+    },
+    {
+      "id": "zhou_face_34_left",
+      "angle": "3/4 左侧 · 看窗外",
+      "description": "头转向窗外，侧光，脸部半明半暗分割",
+      "prompt_positive": "3/4 profile portrait of 38-year-old East Asian man looking out window, thin face with slight stubble, short black hair, thin glasses, morning light from window creating Rembrandt split lighting on face, one side illuminated warm, other side cool shadow, condensation drops on window glass in foreground, dark grey t-shirt, photorealistic, 85mm portrait lens, f2.0, melancholic atmosphere, grey-green tones"
+    },
+    {
+      "id": "zhou_face_34_right",
+      "angle": "3/4 右侧 · 屏幕光",
+      "description": "屏幕光从右侧打来，脸偏向屏幕，若有所思",
+      "prompt_positive": "3/4 profile portrait 38-year-old East Asian man facing right towards laptop screen, blue-green screen light illuminating right side of face, left side in shadow, thin glasses with screen reflection, slightly parted lips as if about to speak, dark grey t-shirt, old apartment, photorealistic, 85mm f2.0, natural skin with visible pores, Rembrandt lighting, intimate documentary style"
+    },
+    {
+      "id": "zhou_silhouette_dawn",
+      "angle": "剪影 · 黎明窗边",
+      "description": "定调镜头——老周背对镜头，面对窗户，城市在窗外的晨雾中",
+      "prompt_positive": "silhouette of thin East Asian man sitting at desk facing window at dawn, backlit by grey morning light, Shenzhen skyline with Ping An Finance Center visible through foggy window, condensation on glass, old apartment interior with peeling paint, one small desk lamp creating warm orange glow, computer screen blue glow, humid atmosphere, particles of light in air, photorealistic, 50mm wide shot, cinematic composition, Wong Kar-wai aesthetic, desaturated colors, deep contrast between warm interior and cold exterior"
+    },
+    {
+      "id": "zhou_hands_typing",
+      "angle": "手部特写 · 打字",
+      "description": "手指停在键盘上方，犹豫的一瞬间",
+      "prompt_positive": "close-up macro shot of East Asian male hands hovering over old MacBook keyboard, mid 30s hands with slightly rough knuckles from coding, fingers paused mid-air above keys, one coffee mug with steam nearby, warm desk lamp light from side, shallow depth of field, macro lens, photorealistic skin texture, visible fingerprints, dust particles floating in shaft of light, contemplative mood"
+    },
+    {
+      "id": "zhou_eyes_extreme",
+      "angle": "眼睛极端特写",
+      "description": "一只眼睛，镜片后，瞳孔里有屏幕的光",
+      "prompt_positive": "extreme close-up of East Asian man's left eye behind thin glasses lens, screen light reflecting in pupil showing tiny green text, tired eye with slight redness at corner, fine lines around eye, morning light catching edge of face, macro lens, extremely shallow depth of field, photorealistic with visible iris texture and eyelashes, the reflection is the focus not the eye itself"
+    }
+  ],
+
+  "negative_prompt_shared": "smiling, young, perfect skin, muscular, studio lighting, neon lights, futuristic, western features, blue eyes, clean shaven, makeup, jewelry, new furniture, bright colors"
+}
